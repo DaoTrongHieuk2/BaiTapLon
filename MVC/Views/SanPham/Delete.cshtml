@@ -1,0 +1,53 @@
+@model MVC.Models.SanPham
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>SanPham</h4>
+    <hr />
+   <div class="max-width-40 ud-center">
+    <div class="w3-container w3-red w3-round">
+        <h2 class="w3-center">Are you sure you want to delete this?</h2>
+    </div>
+    <div class="w3-container w3-card-4">
+        <dl class="w3-row w3-margin-top">
+            <dt class="w3-col l2">
+                @Html.DisplayNameFor(model => model.NameSP):
+            </dt>
+            <dd class="w3-col l3">
+                @Html.DisplayFor(model => model.NameSP)
+            </dd>
+
+            <dd class="w3-col l1 w3-right">
+                @Html.DisplayFor(model => model.NumberSP)
+            </dd>
+            <dt class="w3-col l1 w3-right">
+                @Html.DisplayNameFor(model => model.NumberSP):
+            </dt>
+        </dl>
+        <dl class="w3-row">
+            <dt class="w3-col l2">
+                @Html.DisplayNameFor(model => model.PriceSP):
+            </dt>
+            <dd class="w3-col l9">
+                @Html.DisplayFor(model => model.PriceSP)
+            </dd>
+        </dl>
+        <hr>
+        <div class="w3-row">
+            <div class="w3-col l3">
+                <a asp-action="Index" class="w3-btn w3-green w3-round w3-margin-bottom">Quay lại</a>
+            </div>
+            <div class="w3-right">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="IdSP" />
+                    <input type="submit" value="Delete" class="w3-btn w3-red w3-round w3-margin-bottom" /> 
+                </form>
+            </div>
+        </div>
+    </div>

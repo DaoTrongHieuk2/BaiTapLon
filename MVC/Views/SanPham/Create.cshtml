@@ -1,0 +1,55 @@
+@model MVC.Models.SanPham
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>SanPham</h4>
+<hr />
+<div class="w3-row">
+    <b>SanPham/</b>create
+</div>
+<hr>
+<div class="max-width-40 ud-center">
+    <div class="w3-container w3-teal">
+        <h2>Create new SanPham</h2>
+    </div>
+    <form asp-action="Create" class="w3-container w3-card-4 w3-padding">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="w3-row">
+            <div class="w3-col l3">
+                <label asp-for="IdSP" class="control-label"></label>
+                <input asp-for="IdSP" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="IdSP" class="text-danger"></span>
+            </div>
+            <div class="w3-col l8 w3-right">
+                <label asp-for="NameSP" class="control-label"></label>
+                <input asp-for="NameSP" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="NameSP" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l3">
+                <label asp-for="NumberSP" class="control-label"></label>
+                <input asp-for="NumberSP" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="NumberSP" class="text-danger"></span>
+            </div>
+            <div class="w3-col l8 w3-right">
+                <label asp-for="PriceSP" class="control-label"></label>
+                <input asp-for="PriceSP" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="PriceSP" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w3-margin-top">
+            <a class="w3-btn w3-round w3-green w3-card-4" asp-action="Index">Quay lại</a>
+            <input type="submit" value="Create" class="w3-btn w3-blue w3-right w3-round w3-card-4" />
+        </div>
+    </form>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

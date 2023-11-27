@@ -1,0 +1,48 @@
+@model MVC.Models.KhachHang
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div>
+    <div class="w3-row">
+        <b>KhachHang/</b>Details
+    </div>
+    <hr />
+    <div class="max-width-40 ud-center">
+        <div class="w3-container w3-blue w3-round">
+            <h2 class="w3-center">Display Information ...</h2>
+        </div>
+        <div class="w3-container w3-card-4">
+            <dl class="w3-row w3-margin-top">
+                <dt class="w3-col l2 ">
+                    @Html.DisplayNameFor(model => model.NameKH):
+                </dt>
+                <dd class="w3-col 19 ">
+                    @Html.DisplayFor(model => model.NameKH)
+                </dd>
+            </dl>
+            <dl class="w3-row">
+                <dt class="w3-col l2">
+                    @Html.DisplayNameFor(model => model.AddressKH):
+                </dt>
+                <dd class="w3-col l9">
+                    @Html.DisplayFor(model => model.AddressKH)
+                </dd>
+            </dl>
+            <dl class="w3-row">
+                <dt class="w3-col l2">
+                    @Html.DisplayNameFor(model => model.PhoneKH):
+                </dt>
+                <dd class="w3-col l9">
+                    @Html.DisplayFor(model => model.PhoneKH)
+                </dd>
+            </dl>
+            <hr>
+            <div class="w3-row">
+                <div class="w3-col l3">
+                    <a asp-action="Index" class="w3-btn w3-green w3-round w3-margin-bottom">Quay lại</a>
+                </div>
+
+            </div>
+        </div>
+    </div>

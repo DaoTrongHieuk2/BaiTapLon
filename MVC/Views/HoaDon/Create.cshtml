@@ -1,0 +1,60 @@
+@model MVC.Models.HoaDon
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>HoaDon</h4>
+<hr />
+<div class="max-width-40 ud-center">
+    <div class="w3-container w3-teal">
+        <h2>Create new Khách Hàng</h2>
+    </div>
+    <form asp-action="Create" class="w3-container w3-card-4 w3-padding">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="w3-row">
+            <div class="w3-col l5 w3-center">
+                <label asp-for="IdHD" class="control-label"></label>
+                <input asp-for="IdHD" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="IdHD" class="text-danger"></span>
+            </div>
+            <div class="w3-col l5 w3-right w3-center">
+                <label asp-for="IdKH" class="control-label"></label>
+                <input asp-for="IdKH" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="IdKH" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l5 w3-right w3-center">
+                <label asp-for="IdNV" class="control-label"></label>
+                <input asp-for="IdNV" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="IdNV" class="text-danger"></span>
+            </div>
+            <div class="w3-col l5 w3-center">
+                <label asp-for="IdSP" class="control-label"></label>
+                <input asp-for="IdSP" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="IdSP" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l5 w3-center">
+                <label asp-for="MyProperty" class="control-label"></label>
+                <input asp-for="MyProperty" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="MyProperty" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="w3-margin-top">
+            <a class="w3-btn w3-round w3-green w3-card-4" asp-action="Index">Quay lại</a>
+            <input type="submit" value="Create" class="w3-btn w3-blue w3-right w3-round w3-card-4" />
+        </div>
+    </form>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

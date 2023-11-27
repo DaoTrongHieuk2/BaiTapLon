@@ -1,0 +1,53 @@
+@model MVC.Models.KhachHang
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>KhachHang</h4>
+<hr />
+<div class="max-width-40 ud-center">
+    <div class="w3-container w3-teal">
+        <h2>Create new Khách Hàng</h2>
+    </div>
+    <form asp-action="Create" class="w3-container w3-card-4 w3-padding">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="w3-row">
+            <div class="w3-col l3">
+                <label asp-for="IdKH" class="control-label"></label>
+                <input asp-for="IdKH" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="IdKH" class="text-danger"></span>
+            </div>
+            <div class="w3-col l8 w3-right">
+                <label asp-for="NameKH" class="control-label"></label>
+                <input asp-for="NameKH" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="NameKH" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col l3">
+                <label asp-for="AddressKH" class="control-label"></label>
+                <input asp-for="AddressKH" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="AddressKH" class="text-danger"></span>
+            </div>
+            <div class="w3-col l8 w3-right">
+                <label asp-for="PhoneKH" class="control-label"></label>
+                <input asp-for="PhoneKH" class="w3-input w3-border w3-border-blue w3-round" />
+                <span asp-validation-for="PhoneKH" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="w3-margin-top">
+            <a class="w3-btn w3-round w3-green w3-card-4" asp-action="Index">Quay lại</a>
+            <input type="submit" value="Create" class="w3-btn w3-blue w3-right w3-round w3-card-4" />
+        </div>
+    </form>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
