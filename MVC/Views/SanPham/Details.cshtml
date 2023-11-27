@@ -10,38 +10,40 @@
     <h4>SanPham</h4>
     <hr />
     <div class="max-width-40 ud-center">
-    <div class="w3-container w3-blue w3-round">
-        <h2 class="w3-center">Edit person</h2>
+        <div class="w3-container w3-blue w3-round">
+            <h2 class="w3-center">Details San Pham</h2>
+        </div>
+        <form asp-action="Edit" class="w3-container w3-card-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdSP" />
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col l8">
+                    <label asp-for="NameSP" class="control-label"></label>:
+                    <input asp-for="NameSP" class="form-control" />
+                    <span asp-validation-for="NameSP" class="text-danger"></span>
+                </div>
+                <div class="w3-col l3 w3-right">
+                    <label asp-for="NumberSP" class="control-label"></label>:
+                    <input asp-for="NumberSP" class="form-control" />
+                    <span asp-validation-for="NumberSP" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="w3-row w3-margin-top">
+                <label asp-for="PriceSP" class="control-label"></label>
+                <input asp-for="PriceSP" class="form-control" />
+                <span asp-validation-for="PriceSP" class="text-danger"></span>
+            </div>
+            <hr>
+            <div class="w3-row w3-margin-top w3-margin-bottom">
+                <a asp-action="Index" class="w3-btn w3-green w3-round">Quay lại</a>
+                <input type="submit" value="Save" class="w3-btn w3-blue w3-round w3-right" />
+            </div>
+        </form>
     </div>
-    <form asp-action="Edit" class="w3-container w3-card-4">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <input type="hidden" asp-for="IdSP" />
-        <div class="w3-row w3-margin-top">
-            <div class="w3-col l8">
-                <label asp-for="NameSP" class="control-label"></label>:
-                <input asp-for="NameSP" class="form-control" />
-                <span asp-validation-for="NameSP" class="text-danger"></span>
-            </div>
-            <div class="w3-col l3 w3-right">
-                <label asp-for="NumberSP" class="control-label"></label>:
-                <input asp-for="NumberSP" class="form-control" />
-                <span asp-validation-for="NumberSP" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="w3-row w3-margin-top">
-            <label asp-for="PriceSP" class="control-label"></label>
-            <input asp-for="PriceSP" class="form-control" />
-            <span asp-validation-for="PriceSP" class="text-danger"></span>
-        </div>
-        <hr>
-        <div class="w3-row w3-margin-top w3-margin-bottom">
-            <a asp-action="Index" class="w3-btn w3-green w3-round">Quay lại</a>
-            <input type="submit" value="Save" class="w3-btn w3-blue w3-round w3-right" />
-        </div>
-    </form>
-</div>
 
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }

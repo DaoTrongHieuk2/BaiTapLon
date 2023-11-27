@@ -22,19 +22,22 @@
             </div>
             <div class="w3-col l5 w3-right w3-center">
                 <label asp-for="IdKH" class="control-label"></label>
-                <input asp-for="IdKH" class="w3-input w3-border w3-border-blue w3-round" />
+                <select asp-for="IdKH" class="w3-input w3-border w3-border-blue w3-round"
+                    asp-items="ViewBag.IdKH"></select>
                 <span asp-validation-for="IdKH" class="text-danger"></span>
             </div>
         </div>
         <div class="w3-row">
             <div class="w3-col l5 w3-right w3-center">
                 <label asp-for="IdNV" class="control-label"></label>
-                <input asp-for="IdNV" class="w3-input w3-border w3-border-blue w3-round" />
+                <select asp-for="IdNV" class="w3-input w3-border w3-border-blue w3-round"
+                    asp-items="ViewBag.IdNV"></select>
                 <span asp-validation-for="IdNV" class="text-danger"></span>
             </div>
             <div class="w3-col l5 w3-center">
                 <label asp-for="IdSP" class="control-label"></label>
-                <input asp-for="IdSP" class="w3-input w3-border w3-border-blue w3-round" />
+                <select asp-for="IdSP" class="w3-input w3-border w3-border-blue w3-round"
+                    asp-items="ViewBag.IdSP"></select>
                 <span asp-validation-for="IdSP" class="text-danger"></span>
             </div>
 

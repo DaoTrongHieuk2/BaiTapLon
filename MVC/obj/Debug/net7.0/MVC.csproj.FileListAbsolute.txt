@@ -841,3 +841,4 @@ E:\BAiTap\BaiTapLon\MVC\obj\Debug\net7.0\scopedcss\projectbundle\MVC.bundle.scp.
 E:\BAiTap\BaiTapLon\MVC\obj\Debug\net7.0\MVC.csproj.CopyComplete
 E:\BAiTap\BaiTapLon\MVC\obj\Debug\net7.0\MVC.genruntimeconfig.cache
 E:\BAiTap\BaiTapLon\MVC\obj\Debug\net7.0\ref\MVC.dll
+E:\BAITAPLON\MVC\obj\Debug\net7.0\MVC.sourcelink.json
