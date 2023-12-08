@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MVC.Data;
 using MVC.Models;
+using OfficeOpenXml;
 
 namespace MVC.Controllers
 {
@@ -167,14 +168,39 @@ namespace MVC.Controllers
             {
                 _context.HoaDon.Remove(hoaDon);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool HoaDonExists(string id)
         {
-          return (_context.HoaDon?.Any(e => e.IdHD == id)).GetValueOrDefault();
+            return (_context.HoaDon?.Any(e => e.IdHD == id)).GetValueOrDefault();
+        }
+
+
+
+
+
+
+
+
+        public IActionResult Download()
+        {
+            var fileName = "HoaDonList.xlsx";
+            using (ExcelPackage excelPackage = new ExcelPackage())
+            {
+                ExcelWorksheet excelWorksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
+                excelWorksheet.Cells["A1"].Value = "IdHD";
+                excelWorksheet.Cells["B1"].Value = "IdKH";
+                excelWorksheet.Cells["C1"].Value = "IdNV";
+                excelWorksheet.Cells["D1"].Value = "IdSP";
+                excelWorksheet.Cells["D1"].Value = "MyProperty";
+                var psList = _context.HoaDon.ToList();
+                excelWorksheet.Cells["A2"].LoadFromCollection(psList);
+                var stream = new MemoryStream(excelPackage.GetAsByteArray());
+                return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+            }
         }
     }
 }

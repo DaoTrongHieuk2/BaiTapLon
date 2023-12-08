@@ -8,7 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using MVC.Data;
 using MVC.Models;
 using MVC.Models.Process;
-
+using OfficeOpenXml;
+//2021050258 - Đào Trọng Hiếu
 namespace MVC.Controllers
 {
     public class KhachHangController : Controller
@@ -211,8 +212,25 @@ namespace MVC.Controllers
                     }
                 }
             }
-
             return View();
         }
+
+        public IActionResult Download()
+        {
+            var fileName = "KhachHangList.xlsx";
+            using (ExcelPackage excelPackage = new ExcelPackage())
+            {
+                ExcelWorksheet excelWorksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
+                excelWorksheet.Cells["A1"].Value = "IdKH";
+                excelWorksheet.Cells["B1"].Value = "NameKH";
+                excelWorksheet.Cells["C1"].Value = "AddressKH";
+                excelWorksheet.Cells["D1"].Value = "PhoneKH";
+                var psList = _context.KhachHang.ToList();
+                excelWorksheet.Cells["A2"].LoadFromCollection(psList);
+                var stream = new MemoryStream(excelPackage.GetAsByteArray());
+                return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+            }
+        }
     }
+
 }
