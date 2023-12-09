@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BAITAPLON\\MVC\\MVC.csproj": {}
+    "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj": {}
   },
   "projects": {
-    "E:\\BAITAPLON\\MVC\\MVC.csproj": {
+    "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BAITAPLON\\MVC\\MVC.csproj",
+        "projectUniqueName": "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj",
         "projectName": "MVC",
-        "projectPath": "E:\\BAITAPLON\\MVC\\MVC.csproj",
-        "packagesPath": "C:\\Users\\hieub\\.nuget\\packages\\",
-        "outputPath": "E:\\BAITAPLON\\MVC\\obj\\",
+        "projectPath": "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "E:\\BTL\\BaiTapLon\\MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hieub\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
