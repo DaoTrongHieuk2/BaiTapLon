@@ -9,32 +9,41 @@
 <div>
     <h4>NhanVien</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NameNV)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NameNV)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AddressNV)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AddressNV)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PhoneNV)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PhoneNV)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AgeNV)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AgeNV)
-        </dd>
-    </dl>
+<div class="max-width-40 ud-center">
+        <div class="w3-container w3-blue w3-round">
+            <h2 class="w3-center">Details Nhan Vien</h2>
+        </div>
+        <form asp-action="Edit" class="w3-container w3-card-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdNV" />
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col l8">
+                    <label asp-for="NameNV" class="control-label"></label>:
+                    <input asp-for="NameNV" class="form-control" />
+                    <span asp-validation-for="NameNV" class="text-danger"></span>
+                </div>
+                <div class="w3-col l3 w3-right">
+                    <label asp-for="AddressNV" class="control-label"></label>:
+                    <input asp-for="AddressNV" class="form-control" />
+                    <span asp-validation-for="AddressNV" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="w1-row w3-margin-top">
+                <label asp-for="PhoneNV" class="control-label"></label>
+                <input asp-for="PhoneNV" class="form-control" />
+                <span asp-validation-for="PhoneNV" class="text-danger"></span>
+            </div>
+              <div class="w1-row w3-margin-top">
+                    <label asp-for="AgeNV" class="control-label"></label>:
+                    <input asp-for="AgeNV" class="form-control" />
+                    <span asp-validation-for="AgeNV" class="text-danger"></span>
+                </div>
+            <hr>
+            <div class="w3-row w3-margin-top w3-margin-bottom">
+                <a asp-action="Index" class="w3-btn w3-green w3-round">Quay lại</a>
+            </div>
+        </form>
+    </div>
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.IdNV">Edit</a> |
