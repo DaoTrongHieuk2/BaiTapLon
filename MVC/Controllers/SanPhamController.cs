@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using MVC.Data;
 using MVC.Models;
 using MVC.Models.Process;
+using OfficeOpenXml;
 namespace MVC.Controllers
 {
     public class SanPhamController : Controller
@@ -203,5 +204,22 @@ namespace MVC.Controllers
                  }
            return View();
         }
+        public IActionResult Download()
+        {
+            var fileName = "SanPhamList.xlsx";
+            using (ExcelPackage excelPackage = new ExcelPackage())
+            {
+                ExcelWorksheet excelWorksheet = excelPackage.Workbook.Worksheets.Add("Sheet 1");
+                excelWorksheet.Cells["A1"].Value = "IdSP";
+                excelWorksheet.Cells["B1"].Value = "NameSP";
+                excelWorksheet.Cells["C1"].Value = "NumberSP";
+                excelWorksheet.Cells["D1"].Value = "PriceSP";
+                var psList = _context.SanPham.ToList();
+                excelWorksheet.Cells["A2"].LoadFromCollection(psList);
+                var stream = new MemoryStream(excelPackage.GetAsByteArray());
+                return File(stream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+            }
+        }
     }
+
 }
