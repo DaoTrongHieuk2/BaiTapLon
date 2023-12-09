@@ -8,6 +8,13 @@
 
 <h4>NhanVien</h4>
 <hr />
+<form asp-action="Upload" enctype="multipart/form-data">
+        <div class="row form-control">
+           <label class="col-sm-2">Import data from Excel:</label>
+            <input type="file" name="file" class="col-sm-4">
+            <input type="submit" value="Upload" class="btn btn-primary">
+        </div>
+    </form>
 <div class="max-width-40 ud-center">
     <div class="w3-container w3-teal">
         <h2>Create new NhanVien</h2>
