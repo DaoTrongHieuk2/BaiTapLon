@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj": {}
+    "E:\\BAITAPLON\\MVC\\MVC.csproj": {}
   },
   "projects": {
-    "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj": {
+    "E:\\BAITAPLON\\MVC\\MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj",
+        "projectUniqueName": "E:\\BAITAPLON\\MVC\\MVC.csproj",
         "projectName": "MVC",
-        "projectPath": "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj",
-        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-        "outputPath": "E:\\BTL\\BaiTapLon\\MVC\\obj\\",
+        "projectPath": "E:\\BAITAPLON\\MVC\\MVC.csproj",
+        "packagesPath": "C:\\Users\\hieub\\.nuget\\packages\\",
+        "outputPath": "E:\\BAITAPLON\\MVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\hieub\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net7.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "EPPlus": {
               "target": "Package",
@@ -69,6 +69,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.11, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[8.4.7, )"
             }
           },
           "imports": [
@@ -90,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
