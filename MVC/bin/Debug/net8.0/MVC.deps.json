@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "MVC/1.0.0": {
         "dependencies": {
-          "EPPlus": "7.0.3",
+          "EPPlus": "7.0.5",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.Design": "7.0.13",
           "Microsoft.EntityFrameworkCore.Sqlite": "7.0.13",
@@ -55,7 +55,7 @@
           }
         }
       },
-      "EPPlus/7.0.3": {
+      "EPPlus/7.0.5": {
         "dependencies": {
           "EPPlus.Interfaces": "6.1.1",
           "EPPlus.System.Drawing": "6.1.1",
@@ -67,8 +67,8 @@
         },
         "runtime": {
           "lib/net8.0/EPPlus.dll": {
-            "assemblyVersion": "7.0.3.0",
-            "fileVersion": "7.0.3.0"
+            "assemblyVersion": "7.0.5.0",
+            "fileVersion": "7.0.5.0"
           }
         }
       },
@@ -2805,12 +2805,12 @@
       "path": "azure.identity/1.7.0",
       "hashPath": "azure.identity.1.7.0.nupkg.sha512"
     },
-    "EPPlus/7.0.3": {
+    "EPPlus/7.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2glvViZ12VzGItZa+SYm7Ka6sv/8mBW6KYBetKtDSsZE3OqaX9x7Gbkdd4y1rjawOS5qheqQ/TCqnN6NuL1IIQ==",
-      "path": "epplus/7.0.3",
-      "hashPath": "epplus.7.0.3.nupkg.sha512"
+      "sha512": "sha512-9mmFMS0TkcWSn/izLdej/znBpzuwuJJud5QicgYJw2jtpW/+Jtbgs1u7Wt7Hnm7FyAVyWQ3PU5FDiqORZ7M1cw==",
+      "path": "epplus/7.0.5",
+      "hashPath": "epplus.7.0.5.nupkg.sha512"
     },
     "EPPlus.Interfaces/6.1.1": {
       "type": "package",

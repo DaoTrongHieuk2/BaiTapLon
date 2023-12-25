@@ -46,7 +46,7 @@
           }
         }
       },
-      "EPPlus/7.0.3": {
+      "EPPlus/7.0.5": {
         "type": "package",
         "dependencies": {
           "EPPlus.Interfaces": "6.1.1",
@@ -4315,15 +4315,15 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "EPPlus/7.0.3": {
-      "sha512": "2glvViZ12VzGItZa+SYm7Ka6sv/8mBW6KYBetKtDSsZE3OqaX9x7Gbkdd4y1rjawOS5qheqQ/TCqnN6NuL1IIQ==",
+    "EPPlus/7.0.5": {
+      "sha512": "9mmFMS0TkcWSn/izLdej/znBpzuwuJJud5QicgYJw2jtpW/+Jtbgs1u7Wt7Hnm7FyAVyWQ3PU5FDiqORZ7M1cw==",
       "type": "package",
-      "path": "epplus/7.0.3",
+      "path": "epplus/7.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "EPPlusLogo.png",
-        "epplus.7.0.3.nupkg.sha512",
+        "epplus.7.0.5.nupkg.sha512",
         "epplus.nuspec",
         "lib/net35/EPPlus.dll",
         "lib/net35/EPPlus.xml",
@@ -12178,7 +12178,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "EPPlus >= 7.0.3",
+      "EPPlus >= 7.0.5",
       "Microsoft.EntityFrameworkCore >= 7.0.13",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.13",
       "Microsoft.EntityFrameworkCore.SQLite >= 7.0.13",
@@ -12189,19 +12189,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
+    "C:\\Users\\hieub\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj",
+      "projectUniqueName": "E:\\BAITAPLON\\MVC\\MVC.csproj",
       "projectName": "MVC",
-      "projectPath": "E:\\BTL\\BaiTapLon\\MVC\\MVC.csproj",
-      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "E:\\BTL\\BaiTapLon\\MVC\\obj\\",
+      "projectPath": "E:\\BAITAPLON\\MVC\\MVC.csproj",
+      "packagesPath": "C:\\Users\\hieub\\.nuget\\packages\\",
+      "outputPath": "E:\\BAITAPLON\\MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\hieub\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -12227,7 +12227,7 @@
         "dependencies": {
           "EPPlus": {
             "target": "Package",
-            "version": "[7.0.3, )"
+            "version": "[7.0.5, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
