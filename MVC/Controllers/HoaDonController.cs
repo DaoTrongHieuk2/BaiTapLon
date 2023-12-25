@@ -9,6 +9,8 @@ using MVC.Data;
 using MVC.Models;
 using OfficeOpenXml;
 using MVC.Models.Process;
+using X.PagedList;
+//DaoTrongHieu-2021050258
 namespace MVC.Controllers
 {
     public class HoaDonController : Controller
@@ -21,10 +23,21 @@ namespace MVC.Controllers
         }
         private ExcelProcess _excelPro = new ExcelProcess();
         // GET: HoaDon
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page, int? PageSize)
         {
-            var applicationDbContext = _context.HoaDon.Include(h => h.KhachHang).Include(h => h.NhanVien).Include(h => h.SanPham);
-            return View(await applicationDbContext.ToListAsync());
+            ViewBag.PageSize = new List<SelectListItem>()
+        {
+            new SelectListItem() { Value="3", Text= "3"},
+         new SelectListItem() { Value="5", Text= "5"},
+          new SelectListItem() { Value="10", Text= "10"},
+           new SelectListItem() { Value="15", Text= "15"},
+           new SelectListItem() { Value="25", Text= "25"},
+          new SelectListItem() { Value="50", Text= "50"},
+        };
+            int pagesize = (PageSize ?? 3);
+            ViewBag.psize = pagesize;
+            var model = _context.HoaDon.ToList().ToPagedList(page ?? 1, pagesize);
+            return View(model);
         }
 
         // GET: HoaDon/Details/5

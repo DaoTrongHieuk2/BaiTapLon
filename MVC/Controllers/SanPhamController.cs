@@ -9,6 +9,7 @@ using MVC.Data;
 using MVC.Models;
 using MVC.Models.Process;
 using OfficeOpenXml;
+using X.PagedList;
 namespace MVC.Controllers
 {
     public class SanPhamController : Controller
@@ -21,13 +22,22 @@ namespace MVC.Controllers
         }
         private ExcelProcess _excelPro = new ExcelProcess();
         // GET: SanPham
-        public async Task<IActionResult> Index()
+       public async Task<IActionResult> Index(int? page, int? PageSize)
         {
-              return _context.SanPham != null ? 
-                          View(await _context.SanPham.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.SanPham'  is null.");
+            ViewBag.PageSize = new List<SelectListItem>()
+        {
+            new SelectListItem() { Value="3", Text= "3"},
+         new SelectListItem() { Value="5", Text= "5"},
+          new SelectListItem() { Value="10", Text= "10"},
+           new SelectListItem() { Value="15", Text= "15"},
+           new SelectListItem() { Value="25", Text= "25"},
+          new SelectListItem() { Value="50", Text= "50"},
+        };
+            int pagesize = (PageSize ?? 3);
+            ViewBag.psize = pagesize;
+            var model = _context.SanPham.ToList().ToPagedList(page ?? 1, pagesize);
+            return View(model);
         }
-
         // GET: SanPham/Details/5
         public async Task<IActionResult> Details(string id)
         {

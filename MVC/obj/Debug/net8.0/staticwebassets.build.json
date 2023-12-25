@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mYf5yhRwbvL3YhVOrlK0/RJq9ASa/cqGtpqyuZy2rO0=",
+  "Hash": "zEFHWqi5XwNzQDaOq9ZhdcqOXXfJyfGLHvY7bre/D2w=",
   "Source": "MVC",
   "BasePath": "_content/MVC",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net7.0\\scopedcss\\bundle\\MVC.styles.css",
+      "Identity": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MVC.styles.css",
       "SourceId": "MVC",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MVC",
       "RelativePath": "MVC.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net7.0\\scopedcss\\bundle\\MVC.styles.css"
+      "OriginalItemSpec": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net8.0\\scopedcss\\bundle\\MVC.styles.css"
     },
     {
-      "Identity": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MVC.bundle.scp.css",
+      "Identity": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MVC.bundle.scp.css",
       "SourceId": "MVC",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MVC",
       "RelativePath": "MVC.bundle.scp.css",
       "AssetKind": "All",
@@ -52,7 +52,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\MVC.bundle.scp.css"
+      "OriginalItemSpec": "E:\\BTL\\BaiTapLon\\MVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MVC.bundle.scp.css"
     },
     {
       "Identity": "E:\\BTL\\BaiTapLon\\MVC\\wwwroot\\css\\site.css",
