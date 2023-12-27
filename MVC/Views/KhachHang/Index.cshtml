@@ -8,7 +8,7 @@
 
 <div class="w3-container">
     <div class="w3-row">
-        <b>KhachHang/</b>Index
+        <b>INDEX-</b>Danh sach cac khach hang ve shop ban trai cay
         <a asp-action="Create" class="w3-btn w3-border w3-border-blue w3-round w3-right w3-tiny w3-horver-blue">+ Add
             new</a>
         <a class="btn btn-primary w3-border w3-border-blue w3-round w3-right w3-tiny w3-horver-blue "
@@ -18,7 +18,7 @@
     <hr />
     <table class="w3-table-all w3-card-4 w3-centered">
         <thead>
-            <tr class="w3-blue">
+            <tr class="w3-green">
                 <th class="w3-col l2">IdKH</th>
                 <th class="w3-col l4">NameKH</th>
                 <th class="w3-col l2">AddressKH</th>
@@ -34,8 +34,8 @@
                     <td class="w3-col l2">@item.AddressKH</td>
                     <td class="w3-col l2">@item.PhoneKH</td>
                     <td class="w3-col l2">
-                        <a asp-action="Edit" asp-route-id="@item.IdKH" class="w3-button w3-green w3-round-large w3-small"><i
-                                class="fa fa-edit"></i></a>
+                        <a asp-action="Edit" asp-route-id="@item.IdKH"
+                            class="w3-button w3-yellow w3-round-large w3-small"><i class="fa fa-edit"></i></a>
                         <a asp-action="Delete" asp-route-id="@item.IdKH" class="w3-button w3-red w3-round-large w3-small"><i
                                 class="fa fa-trash"></i></a>
                         <a asp-action="Details" asp-route-id="@item.IdKH"
